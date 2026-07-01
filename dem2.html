@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu điểm thi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* Đổi sang Arial để font dày, vuông vắn và giống ảnh gốc hơn */
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            /* Giảm nhẹ khoảng cách giữa các chữ cho giống app gốc */
+            letter-spacing: -0.5px; 
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Giao diện khung chứa đổ bóng mờ hai bên */
+        .phone-container {
+            width: 100%;
+            max-width: 450px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06), 0 1px 5px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* Tiêu đề chính "Điểm thi" màu xanh lá đậm */
+        .header-title {
+            text-align: center;
+            color: #1a6442;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 25px 0 15px 0;
+        }
+
+        .content-body {
+            position: relative;
+            padding: 0 24px;
+        }
+
+        /* ================================================================= */
+        /* NƠI CHỈNH VỊ TRÍ VÀ KÍCH THƯỚC LOGO ĐÈ LÊN CHỮ */
+        .logo-overlay {
+            position: absolute;
+            top: 25px; /* Khoảng cách từ trên xuống */
+            right: -5px; /* Đẩy sát ra rìa phải một chút giống ảnh gốc */
+            width: 210px; /* Độ rộng của logo trường */
+            height: 210px; /* Độ cao của logo trường */
+            z-index: 10;
+            pointer-events: none; 
+        }
+
+        .logo-overlay img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.95;
+        }
+        /* ================================================================= */
+
+        /* Các hàng hiển thị điểm số */
+        .score-row {
+            border-bottom: 1px solid #f0f2f5;
+            padding: 16px 0;
+        }
+
+        /* Chữ "Môn X:" đậm, béo giống ảnh */
+        .label-text {
+            font-size: 21px;
+            font-weight: bold;
+            color: #1d2129;
+            margin-bottom: 4px;
+        }
+
+        /* Điểm số nằm ngay dưới tên môn */
+        .score-text {
+            font-size: 19px;
+            color: #4b4f56;
+            font-weight: normal;
+        }
+
+        /* Các hàng tổng điểm phía dưới */
+        .total-row {
+            border-bottom: 1px solid #f0f2f5;
+            padding: 18px 0;
+        }
+
+        /* Chữ "Tổng điểm..." đậm nét */
+        .total-label {
+            font-size: 21px;
+            font-weight: bold;
+            color: #1d2129;
+            margin-bottom: 6px;
+        }
+
+        /* Điểm tổng số */
+        .total-score {
+            font-size: 19px;
+            color: #4b4f56;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <div class="header-title">Điểm thi</div>
+
+        <div class="content-body">
+            
+            <!-- LOGO TRƯỜNG CHUYÊN NGUYỄN QUANG DIỆU -->
+            <div class="logo-overlay">
+                <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/5/5d/Logo_Tr%C6%B0%E1%BB%9Dng_THPT_Chuy%C3%AAn_Nguy%E1%BB%85n_Quang_Di%C3%AAu.jpeg/250px-Logo_Tr%C6%B0%E1%BB%9Dng_THPT_Chuy%C3%AAn_Nguy%E1%BB%85n_Quang_Di%C3%AAu.jpeg" alt="Logo Truong">
+            </div>
+
+            <!-- MÔN 1 -->
+            <div class="score-row">
+                <div class="label-text">Môn 1:</div>
+                <div class="score-text">9.8</div>
+            </div>
+
+            <!-- MÔN 2 -->
+            <div class="score-row">
+                <div class="label-text">Môn 2:</div>
+                <div class="score-text">8.0</div>
+            </div>
+
+            <!-- MÔN 3 -->
+            <div class="score-row">
+                <div class="label-text">Môn 3:</div>
+                <div class="score-text">9.0</div>
+            </div>
+
+            <!-- MÔN 4 -->
+            <div class="score-row">
+                <div class="label-text">Môn 4:</div>
+                <div class="score-text">17.0</div>
+            </div>
+
+            <!-- TỔNG ĐIỂM CHUYÊN -->
+            <div class="total-row">
+                <div class="total-label">Tổng điểm chuyên:</div>
+                <div class="total-score">43.8</div>
+            </div>
+
+            <!-- TỔNG ĐIỂM PHỔ THÔNG -->
+            <div class="total-row">
+                <div class="total-label">Tổng điểm phổ thông:</div>
+                <div class="total-score">26.8</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
